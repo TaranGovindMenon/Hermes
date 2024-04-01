@@ -1,0 +1,24 @@
+<!-- job_post.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post a Job</title>
+</head>
+<body>
+    <h1>Post a Job for {{ company_name }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title">Job Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="description">Job Description:</label><br>
+        <textarea id="description" name="description"></textarea><br>
+        <label for="location">Location:</label><br>
+        <input type="text" id="location" name="location"><br>
+        <label for="is_active">Is Active:</label><br>
+        <input type="checkbox" id="is_active" name="is_active" checked><br>
+        <label for="openings">Number of Openings:</label><br>
+        <input type="number" id="openings" name="openings" min="1" value="1"><br>
+        <input type="submit" value="Post Job">
+    </form>
+</body>
+</html>

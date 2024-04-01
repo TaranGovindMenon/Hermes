@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user_details.username }}!</h1>
+    <h2>Company Details</h2>
+    <p>Company Name: {{ user_details.comp_name }}</p>
+    <p>Email: {{ user_details.email }}</p>
+    <p>Website: {{ user_details.website }}</p>
+    <a href="{% url 'post_job' %}?company={{ user_details.comp_name }}"><button>Post a Job</button></a>
+</body>
+</html>

@@ -9,9 +9,9 @@
     
     <h2>Login</h2>
     <ul>
-        <li><a href="/student">Student Login</a></li>
-        <li><a href="/company">Company Login</a></li>
-        <li><a href="/admin">Admin Login</a></li>
+        <li><a href="{% url 'student_index' %}">Student Login</a></li>
+        <li><a href="{% url 'company_index' %}">Company Login</a></li>
+        <li><a href="{% url 'admin:index' %}">Admin Login</a></li>
     </ul>
 </body>
 </html>
